@@ -18,13 +18,14 @@ class MainActivity : AppCompatActivity() {
         submitButton.setOnClickListener {
             val enteredName = inputField.text.toString()
             if(enteredName == ""){
+                greetingTextView.text = ""
                 Toast.makeText(
                     this@MainActivity,
                     "Нужно ввести имя",
                     Toast.LENGTH_SHORT
                 ).show()
             }else{
-                val message = "Welcome $enteredName"
+                val message = "Добро пожаловать $enteredName"
                 greetingTextView.text = message
                 inputField.text.clear()
             }

@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">My Application</string>
-    <string name="hello_message">Hello From Android!</string>
-    <string name="введите_имя">Введите своё имя</string>
-    <string name="отправить">Отправить</string>
+    <string name="app_name">Моё учебное приложение</string>
+    <string name="hello_message">Привет! </string>
+    <string name="enter_name">Введите своё имя</string>
+    <string name="send">Отправить</string>
+    <string name="offers">Что предлагаем?</string>
 </resources>
