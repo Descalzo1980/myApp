@@ -3,6 +3,7 @@ package com.raywenderlich.myapplication
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View.INVISIBLE
 import android.view.View.VISIBLE
 import android.widget.Button
@@ -14,6 +15,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        Log.i("MyTag","MainActivity: OnCreate")
             val greetingTextView = findViewById<TextView>(R.id.tvHello)
             val inputField = findViewById<EditText>(R.id.etNAme)
             val submitButton = findViewById<Button>(R.id.btnSubmit)
@@ -32,7 +34,9 @@ class MainActivity : AppCompatActivity() {
                 ).show()
             }else{
                 val message = "Привет $enteredName"
+                Log.i("MyTag", message)
                 greetingTextView.text = message
+                Log.i("MyTag","After displaying the message on the TextView")
                 inputField.text.clear()
                 offersButton.visibility = VISIBLE
             }
