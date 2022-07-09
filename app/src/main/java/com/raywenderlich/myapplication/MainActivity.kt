@@ -36,7 +36,6 @@ class MainActivity : AppCompatActivity() {
                 val message = "Привет $enteredName"
                 Log.i("MyTag", message)
                 greetingTextView.text = message
-                Log.i("MyTag","After displaying the message on the TextView")
                 inputField.text.clear()
                 offersButton.visibility = VISIBLE
             }
@@ -48,5 +47,35 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Log.i("MyTag","MainActivity: onStart")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.i("MyTag","MainActivity: onResume")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.i("MyTag","MainActivity: onPause")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.i("MyTag","MainActivity: onStop")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.i("MyTag","MainActivity: onDestroy")
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        Log.i("MyTag","MainActivity: onRestart")
     }
 }
